@@ -1,0 +1,267 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Portfolio roadmap for the Deneb custom visual. Fields to add: dim_initiative[short_name], dim_initiative[rag_sort], fact_milestone[milestone], [baseline_date], [forecast_date], [plot_date], [slip_days], [status].",
+  "data": {
+    "name": "dataset"
+  },
+  "width": "container",
+  "height": "container",
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Segoe UI",
+      "labelColor": "#5F6670",
+      "domainColor": "#C9CED6",
+      "gridColor": "#E6E8EC",
+      "tickColor": "#C9CED6"
+    },
+    "legend": {
+      "labelFont": "Segoe UI",
+      "orient": "top",
+      "title": null
+    }
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "datum.slip_days > 0"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "opacity": 0.45,
+        "strokeCap": "round"
+      },
+      "encoding": {
+        "y": {
+          "field": "short_name",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "field": "rag_sort",
+            "op": "min",
+            "order": "ascending"
+          },
+          "axis": {
+            "labelFontSize": 12,
+            "labelColor": "#262B33",
+            "grid": true,
+            "gridDash": [
+              2,
+              4
+            ]
+          }
+        },
+        "x": {
+          "field": "baseline_date",
+          "type": "temporal"
+        },
+        "x2": {
+          "field": "forecast_date"
+        },
+        "color": {
+          "field": "status",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "done",
+              "on_track",
+              "at_risk",
+              "late",
+              "tbc"
+            ],
+            "range": [
+              "#7A8290",
+              "#2E7D32",
+              "#E09A00",
+              "#C62828",
+              "#E09A00"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.slip_days > 0"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "fill": "white",
+        "size": 70,
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "y": {
+          "field": "short_name",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "field": "rag_sort",
+            "op": "min",
+            "order": "ascending"
+          },
+          "axis": {
+            "labelFontSize": 12,
+            "labelColor": "#262B33",
+            "grid": true,
+            "gridDash": [
+              2,
+              4
+            ]
+          }
+        },
+        "x": {
+          "field": "baseline_date",
+          "type": "temporal"
+        },
+        "stroke": {
+          "field": "status",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "done",
+              "on_track",
+              "at_risk",
+              "late",
+              "tbc"
+            ],
+            "range": [
+              "#7A8290",
+              "#2E7D32",
+              "#E09A00",
+              "#C62828",
+              "#E09A00"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 110,
+        "opacity": 1,
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "short_name",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "field": "rag_sort",
+            "op": "min",
+            "order": "ascending"
+          },
+          "axis": {
+            "labelFontSize": 12,
+            "labelColor": "#262B33",
+            "grid": true,
+            "gridDash": [
+              2,
+              4
+            ]
+          }
+        },
+        "x": {
+          "field": "plot_date",
+          "type": "temporal",
+          "title": null,
+          "axis": {
+            "format": "%b %Y",
+            "tickCount": "month",
+            "labelAngle": 0
+          }
+        },
+        "color": {
+          "field": "status",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "done",
+              "on_track",
+              "at_risk",
+              "late",
+              "tbc"
+            ],
+            "range": [
+              "#7A8290",
+              "#2E7D32",
+              "#E09A00",
+              "#C62828",
+              "#E09A00"
+            ]
+          }
+        },
+        "shape": {
+          "condition": {
+            "test": "datum.forecast_date == null",
+            "value": "cross"
+          },
+          "value": "circle"
+        },
+        "tooltip": [
+          {
+            "field": "short_name",
+            "title": "Initiative"
+          },
+          {
+            "field": "milestone",
+            "title": "Milestone"
+          },
+          {
+            "field": "baseline_date",
+            "type": "temporal",
+            "title": "Baseline",
+            "format": "%d %b %Y"
+          },
+          {
+            "field": "forecast_date",
+            "type": "temporal",
+            "title": "Forecast",
+            "format": "%d %b %Y"
+          },
+          {
+            "field": "slip_days",
+            "title": "Slip (days)"
+          },
+          {
+            "field": "status",
+            "title": "Status"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#2F5DA8",
+        "strokeDash": [
+          4,
+          3
+        ],
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "datum": {
+            "expr": "now()"
+          },
+          "type": "temporal"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+// DAX measures for the portfolio model. Create a "_Measures" table
+// (Enter data > one empty column) and add each measure to it.
+
+// ---------- portfolio status
+Initiatives = DISTINCTCOUNT ( dim_initiative[initiative_id] )
+
+Red Initiatives = CALCULATE ( [Initiatives], dim_initiative[assessed_rag] = "RED" )
+
+Amber Initiatives = CALCULATE ( [Initiatives], dim_initiative[assessed_rag] = "AMBER" )
+
+Green Initiatives = CALCULATE ( [Initiatives], dim_initiative[assessed_rag] = "GREEN" )
+
+Re-rated Initiatives =
+    CALCULATE ( [Initiatives], dim_initiative[rag_changed] = TRUE () )
+
+Avg % Complete = DIVIDE ( AVERAGE ( dim_initiative[percent_complete] ), 100 )
+
+Status Date = MAX ( run_metadata[period_end] )
+
+Source Pages = MAX ( run_metadata[source_pages] )
+
+// ---------- roadmap
+Open Milestones =
+    CALCULATE ( COUNTROWS ( fact_milestone ), fact_milestone[is_done] = FALSE () )
+
+Slipped Milestones =
+    CALCULATE (
+        COUNTROWS ( fact_milestone ),
+        fact_milestone[is_done] = FALSE (),
+        fact_milestone[slip_days] > 0
+    )
+
+Avg Slip (days) =
+    CALCULATE ( AVERAGE ( fact_milestone[slip_days] ), fact_milestone[slip_days] > 0 )
+
+Milestones Due Next 60 Days =
+    VAR d = [Status Date]
+    RETURN
+        CALCULATE (
+            COUNTROWS ( fact_milestone ),
+            fact_milestone[is_done] = FALSE (),
+            fact_milestone[plot_date] > d,
+            fact_milestone[plot_date] <= d + 60
+        )
+
+// ---------- risk
+Risk Count = COUNTROWS ( fact_risk )
+
+High Risks = CALCULATE ( [Risk Count], fact_risk[score] >= 15 )
+
+Risk Exposure = SUM ( fact_risk[score] )
+
+Portfolio-weighted Exposure = SUM ( fact_risk[portfolio_score] )
+
+Ungrounded Risks = CALCULATE ( [Risk Count], fact_risk[grounded] = FALSE () )
+
+// ---------- dependencies
+// fact_dependency[from_initiative_id] is the active relationship (what I wait on);
+// fact_dependency[to_initiative_id] is inactive (who waits on me).
+Blocking Dependencies =
+    CALCULATE ( COUNTROWS ( fact_dependency ), fact_dependency[status] = "blocking" )
+
+Initiatives Waiting On This =
+    CALCULATE (
+        DISTINCTCOUNT ( fact_dependency[from_initiative_id] ),
+        USERELATIONSHIP ( fact_dependency[to_initiative_id], dim_initiative[initiative_id] ),
+        fact_dependency[is_live] = TRUE ()
+    )
+
+// ---------- formatting helpers (use with Conditional formatting > Field value)
+RAG Colour =
+    SWITCH (
+        SELECTEDVALUE ( dim_initiative[assessed_rag] ),
+        "RED", "#C62828",
+        "AMBER", "#E09A00",
+        "GREEN", "#2E7D32",
+        "#7A8290"
+    )
+
+Milestone Colour =
+    SWITCH (
+        SELECTEDVALUE ( fact_milestone[status] ),
+        "done", "#7A8290",
+        "on_track", "#2E7D32",
+        "at_risk", "#E09A00",
+        "tbc", "#E09A00",
+        "late", "#C62828"
+    )
+
+Risk Heat Colour =
+    VAR s = MAX ( fact_risk[score] )
+    RETURN
+        SWITCH ( TRUE (), s >= 15, "#C62828", s >= 8, "#E09A00", s > 0, "#2E7D32", BLANK () )

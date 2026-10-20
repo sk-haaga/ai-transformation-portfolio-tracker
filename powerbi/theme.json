@@ -1,0 +1,19 @@
+{
+  "name": "Portfolio Tracker",
+  "dataColors": ["#2F5DA8", "#14233B", "#E09A00", "#C62828", "#2E7D32", "#7A8290", "#8FA9D6", "#D9DDE3"],
+  "background": "#FFFFFF",
+  "foreground": "#262B33",
+  "tableAccent": "#2F5DA8",
+  "good": "#2E7D32",
+  "neutral": "#E09A00",
+  "bad": "#C62828",
+  "maximum": "#C62828",
+  "center": "#E09A00",
+  "minimum": "#2E7D32",
+  "textClasses": {
+    "title": {"fontFace": "Segoe UI Semibold", "fontSize": 14, "color": "#14233B"},
+    "header": {"fontFace": "Segoe UI Semibold", "fontSize": 11, "color": "#14233B"},
+    "label": {"fontFace": "Segoe UI", "fontSize": 10, "color": "#5F6670"},
+    "callout": {"fontFace": "Segoe UI Semibold", "fontSize": 28, "color": "#14233B"}
+  }
+}
