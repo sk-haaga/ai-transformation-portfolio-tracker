@@ -1,0 +1,43 @@
+milestone_key,initiative_id,milestone,baseline_date,forecast_date,plot_date,slip_days,status,is_done
+CRM-01.M1,CRM-01,Pilot complete (40 agents),2026-10-15,2026-10-30,2026-10-30,15.0,late,False
+CRM-01.M2,CRM-01,Responsible AI approval,2026-10-20,,2026-10-20,,at_risk,False
+CRM-01.M3,CRM-01,Wave 2 go-live (350 agents),2026-11-02,2026-12-07,2026-12-07,35.0,at_risk,False
+CRM-01.M4,CRM-01,Partner agents (Tallinn) live,2027-01-11,2027-02-01,2027-02-01,21.0,at_risk,False
+DAT-02.M1,DAT-02,Platform foundation,2026-07-31,2026-07-31,2026-07-31,0.0,done,True
+DAT-02.M2,DAT-02,Finance domain live,2026-09-30,2026-09-30,2026-09-30,0.0,done,True
+DAT-02.M3,DAT-02,Supply chain history tables,2026-10-16,2026-11-06,2026-11-06,21.0,late,False
+DAT-02.M4,DAT-02,Product catalogue + knowledge index feed,2026-10-23,2026-12-04,2026-12-04,42.0,late,False
+DAT-02.M5,DAT-02,Customer domain live,2027-01-15,2027-03-31,2027-03-31,75.0,late,False
+DAT-02.M6,DAT-02,Legacy warehouse decommission,2027-02-26,,2027-02-26,,at_risk,False
+GOV-03.M1,GOV-03,AI policy v1.0 approved,2026-09-30,2026-09-30,2026-09-30,0.0,done,True
+GOV-03.M2,GOV-03,Customer-facing GenAI checklist approved,2026-09-30,2026-11-11,2026-11-11,42.0,late,False
+GOV-03.M3,GOV-03,Revised disclosure wording circulated,2026-10-28,2026-10-28,2026-10-28,0.0,on_track,False
+GOV-03.M4,GOV-03,AI questions in vendor onboarding,2026-11-30,2026-11-30,2026-11-30,0.0,on_track,False
+GOV-03.M5,GOV-03,Responsible AI training content to HR-05,2026-10-01,,2026-10-01,,late,False
+FIN-04.M1,FIN-04,Finland live,2026-06-30,2026-06-30,2026-06-30,0.0,done,True
+FIN-04.M2,FIN-04,Estonia live,2026-10-05,2026-10-05,2026-10-05,0.0,done,True
+FIN-04.M3,FIN-04,Sweden live,2026-11-16,2026-11-16,2026-11-16,0.0,on_track,False
+FIN-04.M4,FIN-04,Norway live,2027-01-25,2027-01-25,2027-01-25,0.0,at_risk,False
+FIN-04.M5,FIN-04,STP rate ≥ 70%,2026-12-31,2027-01-29,2027-01-29,29.0,at_risk,False
+HR-05.M1,HR-05,AI Foundations path launched,2026-06-30,2026-06-30,2026-06-30,0.0,done,True
+HR-05.M2,HR-05,"2,000 learners enrolled",2026-12-31,2026-10-15,2026-10-15,-77.0,done,True
+HR-05.M3,HR-05,Responsible AI module live (mandatory),2026-11-01,2027-01-29,2027-01-29,89.0,at_risk,False
+HR-05.M4,HR-05,CRM-01 wave 2 agent training,2026-11-13,,2026-11-13,,tbc,False
+HR-05.M5,HR-05,SAL-08 sales training,2027-01-29,,2027-01-29,,tbc,False
+HR-05.M6,HR-05,2027 programme plan approved,2026-12-18,2026-12-18,2026-12-18,0.0,on_track,False
+SCM-06.M1,SCM-06,Proof of value,2026-08-31,2026-08-31,2026-08-31,0.0,done,True
+SCM-06.M2,SCM-06,MLOps pipeline,2026-10-16,2026-10-16,2026-10-16,0.0,done,True
+SCM-06.M3,SCM-06,Full-range training data available,2026-10-16,2026-12-04,2026-12-04,49.0,late,False
+SCM-06.M4,SCM-06,Model validated on full range,2026-11-13,2026-12-18,2026-12-18,35.0,late,False
+SCM-06.M5,SCM-06,Planner go-live for S/S 2027 cycle,2027-01-11,,2027-01-11,,at_risk,False
+SCM-06.M6,SCM-06,Legacy forecasting tool retired,2027-06-30,2027-06-30,2027-06-30,0.0,on_track,False
+IT-07.M1,IT-07,Access packages for data platform,2026-10-30,2026-10-30,2026-10-30,0.0,on_track,False
+IT-07.M2,IT-07,SSO migration complete,2026-11-30,2026-11-30,2026-11-30,0.0,on_track,False
+IT-07.M3,IT-07,Partner B2B identity live,2026-12-01,2027-01-31,2027-01-31,61.0,late,False
+IT-07.M4,IT-07,Workload identity for FIN-04,2026-12-31,2026-12-31,2026-12-31,0.0,on_track,False
+IT-07.M5,IT-07,Legacy directory decommissioned,2027-03-31,2027-03-31,2027-03-31,0.0,on_track,False
+SAL-08.M1,SAL-08,Pilot launched,2026-08-31,2026-08-31,2026-08-31,0.0,done,True
+SAL-08.M2,SAL-08,Template library complete,2026-10-16,2026-10-16,2026-10-16,0.0,done,True
+SAL-08.M3,SAL-08,Red-team / data leakage test,2026-11-15,2026-11-15,2026-11-15,0.0,on_track,False
+SAL-08.M4,SAL-08,Customer-facing approval (GOV-03),2026-11-30,,2026-11-30,,at_risk,False
+SAL-08.M5,SAL-08,Wider rollout to 180 sellers,2027-02-01,,2027-02-01,,at_risk,False

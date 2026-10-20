@@ -1,0 +1,18 @@
+from_initiative_id,to_initiative_id,mention,what,status,needed_by,is_live
+CRM-01,DAT-02,DAT-02,Product knowledge index built from the lakehouse product catalogue,blocking,2026-11-02,True
+CRM-01,GOV-03,GOV-03,Approval checklist for customer-facing GenAI,blocking,2026-10-20,True
+CRM-01,IT-07,IT-07,SSO / conditional access for partner agents,at_risk,2027-01-11,True
+CRM-01,HR-05,HR-05,Wave 2 agent training (weeks 45-46),on_track,2026-11-13,False
+DAT-02,IT-07,Identity programme (IT-07),Role-based access groups to replace named-user grants,on_track,2026-10-30,False
+FIN-04,IT-07,Identity & Access programme (IT-07),Workload identity pattern to replace shared credentials,on_track,2026-12-31,False
+FIN-04,DAT-02,DAT-02,Finance domain on the data platform for reporting,on_track,,False
+HR-05,GOV-03,AI Governance working group (GOV-03),Responsible AI module content,blocking,2026-11-06,True
+HR-05,CRM-01,CRM-01,Firm wave 2 go-live date to schedule agent training,at_risk,2026-10-25,True
+HR-05,SAL-08,Sales Proposal Generator (SAL-08),Confirmed rollout date for sales training,at_risk,,True
+SAL-08,GOV-03,AI Governance group (GOV-03),Customer-facing GenAI checklist approval,blocking,2026-11-30,True
+SAL-08,CRM-01,Customer Service Copilot (CRM-01),Shared retrieval service and product knowledge index,at_risk,,True
+SAL-08,DAT-02,DAT-02,Product catalogue feeding the knowledge index,at_risk,,True
+SAL-08,HR-05,AI Skills Academy,Sales training for about 180 sellers,on_track,2027-01-29,False
+SCM-06,DAT-02,DAT-02,Supply chain history tables on the lakehouse,blocking,2026-10-16,True
+SCM-06,DAT-02,Data Platform team,Product hierarchy / SKU mapping from the catalogue domain,blocking,2026-11-13,True
+SCM-06,HR-05,AI Skills Academy,Champions to support planner adoption,on_track,,False
