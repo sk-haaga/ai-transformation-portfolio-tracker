@@ -1,0 +1,47 @@
+AI SKILLS ACADEMY (HR-05) — STATUS UPDATE
+Prepared by: Head of Learning & Development
+Date: 15 October 2026
+
+RAG: GREEN overall / AMBER on content
+
+-------------------------------------------------
+1. WHAT'S GOING WELL
+-------------------------------------------------
+Enrolment is ahead of plan. 2,140 employees have started the "AI Foundations" e-learning path (target for year end was 2,000 - already exceeded). Completion rate of those who started is 68%.
+
+The champions network now has 85 AI champions across business units. They run monthly show-and-tell sessions. Feedback scores average 4.4/5.
+
+Manager workshops ("Leading teams with AI") have run 12 times, 190 managers attended.
+
+-------------------------------------------------
+2. CONCERNS
+-------------------------------------------------
+a) Responsible AI module
+We committed to a mandatory Responsible AI module in the Foundations path. The content was supposed to come from the AI Governance working group (GOV-03) on 1 October. We still don't have it. We can't make the path mandatory for all staff without it, and Legal won't let us write it ourselves. If we don't have content by early November, the mandatory roll-out slips to Q1 2027. Medium impact - it's mostly a compliance / reputational thing, but also affects the EU AI Act AI-literacy obligation that Legal keeps mentioning.
+
+b) Role-specific training for copilot rollouts
+We've booked training sessions in weeks 45-46 for ~350 customer service agents ahead of the Customer Service Copilot wave 2. We are now hearing informally that wave 2 might slip to December. If it does, we need to rebook ~30 sessions and trainers, and training too far ahead of go-live doesn't stick. Need a firm date from CRM-01 by 25 Oct.
+
+Same story for the Sales Proposal Generator (SAL-08) - we planned sales team training for January but have no confirmed go-live date.
+
+c) Licence costs for the learning platform add-on
+The AI practice sandbox add-on (lets people practise prompting safely) costs €65k/year. Funded for 2026 only from the transformation budget. Not yet in the 2027 budget. Low-medium risk.
+
+-------------------------------------------------
+3. MILESTONES
+-------------------------------------------------
+- AI Foundations path launched ............. DONE (Jun 2026)
+- 2,000 learners enrolled ................... DONE (Oct 2026)
+- Champions network 75+ .................... DONE
+- Responsible AI module live (mandatory) .... planned 1 Nov 2026 -> forecast Jan 2027 (AT RISK)
+- CRM-01 wave 2 agent training ............. planned w45-46 -> TBC, dependent on CRM-01 date
+- SAL-08 sales training .................... planned Jan 2027 -> TBC
+- 2027 programme plan approved ............. Dec 2026
+
+Approx 65% complete against the 2026 plan.
+
+-------------------------------------------------
+4. ASKS
+-------------------------------------------------
+- GOV-03 to commit to a date for Responsible AI content.
+- CRM-01 to confirm wave 2 date by 25 Oct.

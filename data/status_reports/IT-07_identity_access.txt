@@ -1,0 +1,30 @@
+IT-07 Identity & Access Modernisation
+Status — 16 Oct 2026
+Owner: IT Security Architecture
+
+Status: GREEN-ish. Calling it AMBER for the partner identity workstream only.
+
+Updates:
+* Single sign-on migration: 142 of 180 applications moved to the new identity provider (79%). Remaining are mostly legacy on-prem apps; on track for end of Nov.
+* MFA coverage employees: 99.1%.
+* Role-based access groups ("access packages") design signed off. First packages being built for the data platform (for DAT-02) - target 30 Oct. On track.
+* Workload identity pattern (managed identities for service-to-service) - pattern documented, first two adopters onboarded. FIN-04 vendor connector is next in queue, scheduled for December.
+
+Partner / external identity workstream (AMBER):
+* Need B2B guest access + conditional access policies for external partner users - first consumer is the Customer Service Copilot for outsourced agents in Tallinn (CRM-01).
+* Problem: the partner's own identity provider is on an old version and doesn't support the federation standard we chose. Options: (a) partner upgrades - their timeline is Q1 2027, (b) we issue local guest accounts - Security not keen, more admin, (c) temporary exception with IP restriction. Decision needed from CISO.
+* Forecast for partner identity: was 1 Dec 2026, now realistically end of January 2027 if partner upgrades, or mid-December if we go with option (b).
+
+Risks:
+- Partner federation compatibility (above). Medium likelihood, medium impact - delays Tallinn rollout for CRM-01 but not the internal wave.
+- Legacy app stragglers: ~8 apps may need vendor upgrades to support modern auth. Low impact on other programmes. Budget for upgrades ~€90k not yet approved.
+- Team capacity: the identity team is 4 people supporting both the migration and BAU access requests. Ticket backlog growing (avg wait for access request now 3.5 days, SLA is 2). Medium.
+
+Milestones:
+- SSO migration complete: 30 Nov 2026 (on track)
+- Access packages for data platform: 30 Oct 2026 (on track)
+- Workload identity for FIN-04: Dec 2026 (on track)
+- Partner B2B identity live: planned 1 Dec 2026 -> forecast 31 Jan 2027
+- Legacy directory decommissioned: Mar 2027
+
+Overall ~75% complete.

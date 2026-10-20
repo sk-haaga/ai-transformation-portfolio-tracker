@@ -1,0 +1,42 @@
+From: Data Platform Programme Office
+To: Transformation PMO
+Subject: DAT-02 Enterprise Data Platform (Lakehouse) - fortnightly update, period ending 16/10/2026
+
+Hi all,
+
+Fortnightly update below. Short version: overall RED this period. Core platform is in decent shape but the domain migrations are behind and that is starting to hit other programmes.
+
+WHERE WE ARE
+- Platform foundation (landing zone, storage, compute, catalogue, CI/CD) is done and stable. 99.7% availability over the period.
+- Domain migrations: Finance domain is migrated and reconciled. Supply chain domain is ~70% migrated. Product catalogue domain is only ~35% - we found much more data quality debt in the legacy PIM than scoped (duplicate SKUs, ~18k products with missing attributes, inconsistent units).
+- Customer domain has not started yet (was planned to start Oct).
+- Overall programme roughly 55% complete against a plan that said 70% by now.
+
+WHY RED
+The product catalogue domain is on the critical path for at least two other initiatives:
+  * the Customer Service Copilot (CRM-01) needs the product knowledge index built from the catalogue to replace the old SharePoint export
+  * the Demand Forecasting work (SCM-06) needs clean product hierarchy + SKU mapping, and also the supply chain history tables
+We have told both teams that the catalogue domain won't be production-ready until early December at best (was 23 Oct). Supply chain history tables should be ready 6 Nov (was 16 Oct).
+
+Additionally, two of our four contract data engineers roll off on 31 October when the current statement of work ends. Procurement has the extension request but it hasn't been approved. If we lose them, December becomes January for the catalogue, and the customer domain slides into Q2 2027.
+
+KEY RISKS
+1. Contractor capacity loss on 31 Oct - likelihood high (no approval yet), impact very high because it delays every downstream consumer. Mitigation: escalate SOW extension to CFO this week; cross-train two internal engineers (partial cover only).
+2. Product data quality - impact high. The business data owners for product have not committed people to the cleanup. We need ~3 FTE from Product Management for 6 weeks. Mitigation: proposed a data quality sprint; awaiting sponsor decision.
+3. Legacy decommission costs - the old warehouse licence renews 1 March 2027 (approx €420k). If migrations are not finished by then we have to renew for another year. Likelihood medium.
+4. Access model - we are waiting on the Identity programme (IT-07) for role-based groups so we can switch from named-user grants. Not urgent but creating admin overhead and audit findings.
+
+MILESTONES
+- Platform foundation: done (Jul 2026)
+- Finance domain live: done (Sep 2026)
+- Supply chain history tables: baseline 16 Oct -> forecast 6 Nov
+- Product catalogue domain + knowledge index feed: baseline 23 Oct -> forecast 4 Dec
+- Customer domain live: baseline 15 Jan 2027 -> forecast 31 Mar 2027
+- Legacy warehouse decommission: baseline 28 Feb 2027 -> forecast at risk
+
+ASKS
+- CFO decision on contractor SOW extension (needed by 24 Oct).
+- Product Management to release 3 FTE for data quality sprint.
+
+Thanks,
+Data Platform PMO

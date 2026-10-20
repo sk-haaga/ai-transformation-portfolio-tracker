@@ -1,0 +1,9 @@
+initiative_id,name,short_name,theme,owner,aliases
+CRM-01,GenAI Customer Service Copilot,CS Copilot,Customer,Director of Customer Operations,customer service copilot|copilot|cs copilot
+DAT-02,Enterprise Data Platform (Lakehouse),Data Platform,Foundations,Data Platform PMO,data platform|lakehouse|data platform team|product catalogue domain
+GOV-03,AI Governance & Responsible AI Framework,AI Governance,Foundations,Head of Risk & Compliance,ai governance|governance board|ai governance board|responsible ai|ai governance working group
+FIN-04,Intelligent Invoice Processing,Invoice Automation,Operations,Finance Operations Manager,invoice processing|invoice automation|ap automation
+HR-05,AI Skills Academy,Skills Academy,People,Head of Learning & Development,ai skills academy|skills academy|training
+SCM-06,Demand Forecasting with ML,Demand Forecasting,Operations,Supply Chain Planning Director,demand forecasting|forecasting
+IT-07,Identity & Access Modernisation,Identity & Access,Foundations,IT Security Architecture,identity programme|identity & access|identity and access|sso
+SAL-08,AI Sales Proposal Generator,Proposal Generator,Customer,Sales Excellence Lead,sales proposal generator|proposal generator
