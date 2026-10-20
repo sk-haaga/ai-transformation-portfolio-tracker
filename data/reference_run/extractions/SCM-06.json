@@ -1,0 +1,68 @@
+{
+  "initiative_id": "SCM-06",
+  "period_end": "2026-10-16",
+  "reported_rag": "AMBER",
+  "assessed_rag": "AMBER",
+  "rag_rationale": "Model value is proven and the pipeline is built, but scaling is blocked on data and the January go-live has little float left.",
+  "percent_complete": 40,
+  "headline": "Model cuts forecast error from 38% to 27%, but data delays put January go-live and ~€1M benefit at risk.",
+  "progress": [
+    "MLOps pipeline built and tested end-to-end on pilot data",
+    "Planner UI prototype reviewed with 6 planners",
+    "Explainability view added to backlog after planner feedback"
+  ],
+  "milestones": [
+    {"name": "Proof of value", "baseline": "2026-08-31", "forecast": "2026-08-31", "status": "done"},
+    {"name": "MLOps pipeline", "baseline": "2026-10-16", "forecast": "2026-10-16", "status": "done"},
+    {"name": "Full-range training data available", "baseline": "2026-10-16", "forecast": "2026-12-04", "status": "late"},
+    {"name": "Model validated on full range", "baseline": "2026-11-13", "forecast": "2026-12-18", "status": "late"},
+    {"name": "Planner go-live for S/S 2027 cycle", "baseline": "2027-01-11", "forecast": null, "status": "at_risk"},
+    {"name": "Legacy forecasting tool retired", "baseline": "2027-06-30", "forecast": "2027-06-30", "status": "on_track"}
+  ],
+  "risks": [
+    {
+      "title": "Full-range data blocked on data platform",
+      "description": "Supply chain history and SKU mapping from DAT-02 have slipped, so the model cannot scale beyond the pilot category.",
+      "category": "data",
+      "likelihood": 5,
+      "impact": 4,
+      "mitigation": "Extend hand-curated mapping to 3 more categories (~45% of revenue); ask DAT-02 to prioritise the SKU mapping table.",
+      "evidence": "We cannot scale beyond the pilot category with the current hand-curated mapping file."
+    },
+    {
+      "title": "Missing the S/S 2027 planning cycle",
+      "description": "If go-live misses mid-January, benefits wait for the A/W cycle, deferring about €1M of working-capital benefit.",
+      "category": "financial",
+      "likelihood": 4,
+      "impact": 4,
+      "mitigation": null,
+      "evidence": "deferring most of the inventory benefit by ~6 months"
+    },
+    {
+      "title": "Planners distrust model forecasts",
+      "description": "Planners heavily override forecasts today and may ignore the model without explanations.",
+      "category": "adoption",
+      "likelihood": 3,
+      "impact": 3,
+      "mitigation": "Explainability view, co-design sessions, Skills Academy champions.",
+      "evidence": "Planners override forecasts heavily today."
+    },
+    {
+      "title": "Data science capacity drops in December",
+      "description": "One of the two data scientists goes on leave during validation.",
+      "category": "people_capacity",
+      "likelihood": 3,
+      "impact": 2,
+      "mitigation": null,
+      "evidence": "One of two data scientists on parental leave from December."
+    }
+  ],
+  "dependencies": [
+    {"depends_on": "DAT-02", "what": "Supply chain history tables on the lakehouse", "needed_by": "2026-10-16", "status": "blocking"},
+    {"depends_on": "Data Platform team", "what": "Product hierarchy / SKU mapping from the catalogue domain", "needed_by": "2026-11-13", "status": "blocking"},
+    {"depends_on": "AI Skills Academy", "what": "Champions to support planner adoption", "needed_by": null, "status": "on_track"}
+  ],
+  "asks": [
+    "Steering group to prioritise the SKU mapping table within DAT-02's catalogue work"
+  ]
+}

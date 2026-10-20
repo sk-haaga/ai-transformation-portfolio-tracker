@@ -1,0 +1,74 @@
+{
+  "initiative_id": "GOV-03",
+  "period_end": "2026-10-14",
+  "reported_rag": "AMBER",
+  "assessed_rag": "RED",
+  "rag_rationale": "Self-assessed Amber, but the customer-facing checklist has slipped three times, now blocks two go-lives, and the capacity cause is unresolved.",
+  "percent_complete": 60,
+  "headline": "Customer-facing GenAI checklist slips again to 11 Nov, blocking two go-lives; part-time group lacks capacity.",
+  "progress": [
+    "AI policy v1.0 approved and published",
+    "AI use case register live: 27 use cases, 9 classified high-risk",
+    "Internal-facing GenAI approval checklist in use",
+    "Model monitoring vendors shortlisted to two"
+  ],
+  "milestones": [
+    {"name": "AI policy v1.0 approved", "baseline": "2026-09-30", "forecast": "2026-09-30", "status": "done"},
+    {"name": "Customer-facing GenAI checklist approved", "baseline": "2026-09-30", "forecast": "2026-11-11", "status": "late"},
+    {"name": "Revised disclosure wording circulated", "baseline": "2026-10-28", "forecast": "2026-10-28", "status": "on_track"},
+    {"name": "AI questions in vendor onboarding", "baseline": "2026-11-30", "forecast": "2026-11-30", "status": "on_track"},
+    {"name": "Responsible AI training content to HR-05", "baseline": "2026-10-01", "forecast": null, "status": "late"}
+  ],
+  "risks": [
+    {
+      "title": "Customer-facing checklist blocks go-lives",
+      "description": "Without the approved checklist no customer-facing GenAI use case can go live; CRM-01 and SAL-08 are waiting.",
+      "category": "governance_compliance",
+      "likelihood": 5,
+      "impact": 5,
+      "mitigation": "One more drafting round; CRM-01 dry run as test case.",
+      "evidence": "Customer Service Copilot (CRM-01) explicitly blocked for go-live."
+    },
+    {
+      "title": "No dedicated governance staff",
+      "description": "All members are part-time, which the chair names as the main reason drafting is slow.",
+      "category": "people_capacity",
+      "likelihood": 4,
+      "impact": 4,
+      "mitigation": "Request for 1 FTE Responsible AI lead going to exec committee.",
+      "evidence": "The working group has no dedicated staff — everyone is part-time."
+    },
+    {
+      "title": "Unknown AI inside third-party SaaS",
+      "description": "Embedded AI features in vendor software are not inventoried, so high-risk use under the EU AI Act may go unnoticed.",
+      "category": "governance_compliance",
+      "likelihood": 3,
+      "impact": 4,
+      "mitigation": "Procurement to add AI questions to vendor onboarding by end November.",
+      "evidence": "we don't yet have a complete inventory of AI features embedded in third-party SaaS"
+    },
+    {
+      "title": "Model monitoring tooling unfunded",
+      "description": "Monitoring tooling sits in the 2027 budget round; manual spreadsheets will not scale as use cases grow.",
+      "category": "technology",
+      "likelihood": 4,
+      "impact": 3,
+      "mitigation": null,
+      "evidence": "manual monitoring won't scale beyond ~10 production use cases"
+    },
+    {
+      "title": "Responsible AI training content late",
+      "description": "Content owed to the Skills Academy for the mandatory module is overdue.",
+      "category": "delivery",
+      "likelihood": 4,
+      "impact": 2,
+      "mitigation": null,
+      "evidence": "we're behind on giving them content (was due 1 Oct)"
+    }
+  ],
+  "dependencies": [],
+  "asks": [
+    "Approve a dedicated Responsible AI lead (1 FTE)",
+    "Fund model monitoring tooling in the 2027 budget round"
+  ]
+}

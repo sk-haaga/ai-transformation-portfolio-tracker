@@ -1,0 +1,68 @@
+{
+  "initiative_id": "SAL-08",
+  "period_end": "2026-10-16",
+  "reported_rag": "AMBER",
+  "assessed_rag": "AMBER",
+  "rag_rationale": "Tool works and is used, but the benefit case is on hold until customer-facing approval; rollout date at risk.",
+  "percent_complete": 35,
+  "headline": "First drafts in 20 minutes instead of two days, but the €1.4M benefit waits on customer-facing AI approval.",
+  "progress": [
+    "25 account managers piloting; 63 proposals drafted since August",
+    "Template library complete: 12 templates, 140 approved content blocks",
+    "Proposals generated directly from CRM opportunity records"
+  ],
+  "milestones": [
+    {"name": "Pilot launched", "baseline": "2026-08-31", "forecast": "2026-08-31", "status": "done"},
+    {"name": "Template library complete", "baseline": "2026-10-16", "forecast": "2026-10-16", "status": "done"},
+    {"name": "Red-team / data leakage test", "baseline": "2026-11-15", "forecast": "2026-11-15", "status": "on_track"},
+    {"name": "Customer-facing approval (GOV-03)", "baseline": "2026-11-30", "forecast": null, "status": "at_risk"},
+    {"name": "Wider rollout to 180 sellers", "baseline": "2027-02-01", "forecast": null, "status": "at_risk"}
+  ],
+  "risks": [
+    {
+      "title": "Benefit blocked by customer-facing approval",
+      "description": "Every proposal is fully rewritten by humans until the customer-facing checklist is approved, removing most of the time saving.",
+      "category": "governance_compliance",
+      "likelihood": 5,
+      "impact": 4,
+      "mitigation": "Join CRM-01's checklist dry run.",
+      "evidence": "we can't claim the €1.4M productivity benefit until it's resolved"
+    },
+    {
+      "title": "Wrong product specs from stale index",
+      "description": "The shared knowledge index depends on the delayed product catalogue; a wrong spec could reach a signed contract.",
+      "category": "data",
+      "likelihood": 3,
+      "impact": 5,
+      "mitigation": "Product spec sections locked to human-written content until the new index is live.",
+      "evidence": "Accuracy risk on technical specs in proposals"
+    },
+    {
+      "title": "Cross-customer pricing leakage",
+      "description": "Retrieval could surface one customer's pricing in another customer's proposal.",
+      "category": "security",
+      "likelihood": 2,
+      "impact": 5,
+      "mitigation": "Retrieval scoped per account; red-team test in November.",
+      "evidence": "the model could mix up pricing from one customer's proposal into another"
+    },
+    {
+      "title": "Sales training date unconfirmed",
+      "description": "Training for about 180 sellers cannot be scheduled without a rollout date.",
+      "category": "adoption",
+      "likelihood": 3,
+      "impact": 2,
+      "mitigation": null,
+      "evidence": "we can't confirm a date yet"
+    }
+  ],
+  "dependencies": [
+    {"depends_on": "AI Governance group (GOV-03)", "what": "Customer-facing GenAI checklist approval", "needed_by": "2026-11-30", "status": "blocking"},
+    {"depends_on": "Customer Service Copilot (CRM-01)", "what": "Shared retrieval service and product knowledge index", "needed_by": null, "status": "at_risk"},
+    {"depends_on": "DAT-02", "what": "Product catalogue feeding the knowledge index", "needed_by": null, "status": "at_risk"},
+    {"depends_on": "AI Skills Academy", "what": "Sales training for about 180 sellers", "needed_by": "2027-01-29", "status": "on_track"}
+  ],
+  "asks": [
+    "Agree SAL-08 joins CRM-01's customer-facing checklist dry run instead of a separate review"
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "headline": "Foundations are the bottleneck: Data Platform and AI Governance delays now hold up three AI go-lives. Four decisions needed by 11 Nov.",
+  "key_messages": [
+    "Value is proven where AI is live: invoice automation runs 64% touch-free and the service copilot cuts handle time 11% in pilot.",
+    "Delivery risk has moved to the foundations: the product catalogue (DAT-02) and the customer-facing AI checklist (GOV-03) together block CS Copilot, Demand Forecasting and the Proposal Generator.",
+    "Both bottlenecks are capacity problems with small fixes: a contractor extension and 3 product FTE for data, one Responsible AI lead for governance."
+  ],
+  "portfolio_risks": [
+    {
+      "title": "Product catalogue delay stalls three AI go-lives",
+      "root_initiative": "DAT-02",
+      "affected_initiatives": [
+        "DAT-02",
+        "CRM-01",
+        "SCM-06",
+        "SAL-08"
+      ],
+      "linked_risk_ids": [
+        "DAT-02.R1",
+        "DAT-02.R2",
+        "DAT-02.R3",
+        "CRM-01.R1",
+        "SCM-06.R1",
+        "SCM-06.R2",
+        "SAL-08.R2"
+      ],
+      "impact_statement": "Copilot wave 2 slips to December and forecasting may miss the S/S 2027 cycle (~€1M benefit deferred ~6 months); losing contractors on 31 Oct pushes the catalogue into January.",
+      "recommended_action": "CFO approves contractor SOW extension by 24 Oct; Product Management releases 3 FTE for data quality; DAT-02 delivers the SKU mapping table first."
+    },
+    {
+      "title": "Governance capacity blocks customer-facing AI",
+      "root_initiative": "GOV-03",
+      "affected_initiatives": [
+        "GOV-03",
+        "CRM-01",
+        "SAL-08",
+        "HR-05"
+      ],
+      "linked_risk_ids": [
+        "GOV-03.R1",
+        "GOV-03.R2",
+        "GOV-03.R5",
+        "CRM-01.R2",
+        "SAL-08.R1",
+        "HR-05.R1"
+      ],
+      "impact_statement": "No customer-facing GenAI go-live before 11 Nov at the earliest; the €1.4M proposal benefit is on hold and mandatory Responsible AI training slips into 2027.",
+      "recommended_action": "Exec committee funds a Responsible AI lead; run a joint CRM-01/SAL-08 checklist dry run before the 11 Nov approval meeting."
+    },
+    {
+      "title": "Users bypass AI output; training timing drifts",
+      "root_initiative": "HR-05",
+      "affected_initiatives": [
+        "HR-05",
+        "CRM-01",
+        "SCM-06",
+        "SAL-08"
+      ],
+      "linked_risk_ids": [
+        "CRM-01.R4",
+        "SCM-06.R3",
+        "HR-05.R2",
+        "HR-05.R3",
+        "SAL-08.R4"
+      ],
+      "impact_statement": "Benefits depend on agents and planners acting on AI output; training booked against moving go-live dates will need rebooking and won't stick.",
+      "recommended_action": "Lock go-live dates before booking training; extend the champions network to supply chain planners."
+    },
+    {
+      "title": "2027 AI run costs rising across vendors",
+      "root_initiative": "FIN-04",
+      "affected_initiatives": [
+        "FIN-04",
+        "CRM-01",
+        "HR-05",
+        "IT-07"
+      ],
+      "linked_risk_ids": [
+        "FIN-04.R2",
+        "CRM-01.R5",
+        "HR-05.R4",
+        "IT-07.R3"
+      ],
+      "impact_statement": "A 12% document-AI price rise, ~10% model token uplift, the unfunded €65k sandbox and €90k app upgrades all land in 2027.",
+      "recommended_action": "Consolidate AI run costs into one 2027 budget line; Procurement negotiates the FIN-04 renewal before March."
+    },
+    {
+      "title": "AI compliance gaps: monitoring and shadow AI",
+      "root_initiative": "GOV-03",
+      "affected_initiatives": [
+        "GOV-03"
+      ],
+      "linked_risk_ids": [
+        "GOV-03.R3",
+        "GOV-03.R4"
+      ],
+      "impact_statement": "Manual monitoring won't scale past ~10 production use cases, and unknown AI inside third-party SaaS creates EU AI Act exposure.",
+      "recommended_action": "Fund monitoring tooling in the 2027 budget round; Procurement adds AI questions to vendor onboarding by end of November."
+    },
+    {
+      "title": "Legacy warehouse renews at ~€420k",
+      "root_initiative": "DAT-02",
+      "affected_initiatives": [
+        "DAT-02"
+      ],
+      "linked_risk_ids": [
+        "DAT-02.R4"
+      ],
+      "impact_statement": "If migrations miss 1 Mar 2027, the old warehouse licence renews for another year at about €420k.",
+      "recommended_action": "Take a go/no-go on decommission in January from the customer-domain forecast; negotiate a short extension option now."
+    },
+    {
+      "title": "Partner identity delays copilot for Tallinn",
+      "root_initiative": "IT-07",
+      "affected_initiatives": [
+        "IT-07",
+        "CRM-01"
+      ],
+      "linked_risk_ids": [
+        "IT-07.R1",
+        "CRM-01.R3"
+      ],
+      "impact_statement": "Outsourced agents go live 1 Feb 2027 at the earliest instead of 11 Jan.",
+      "recommended_action": "CISO chooses the interim partner-identity option this month."
+    }
+  ],
+  "decisions_required": [
+    "CFO: approve the Data Platform contractor SOW extension by 24 Oct",
+    "Sponsor: confirm Copilot wave 2 waits for the new knowledge index (7 Dec) so training is rebooked by 25 Oct",
+    "Product Management: release 3 FTE for a six-week data quality sprint, SKU mapping first",
+    "Exec committee: fund a Responsible AI lead and a joint CRM-01/SAL-08 checklist dry run before 11 Nov"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "initiative_id": "DAT-02",
+  "period_end": "2026-10-16",
+  "reported_rag": "RED",
+  "assessed_rag": "RED",
+  "rag_rationale": "Programme is 15 points behind plan and the product catalogue slip is now delaying three other initiatives.",
+  "percent_complete": 55,
+  "headline": "Product catalogue migration slips six weeks to December, delaying three AI initiatives; contractor roll-off threatens more.",
+  "progress": [
+    "Platform foundation stable at 99.7% availability",
+    "Finance domain migrated and reconciled",
+    "Supply chain domain about 70% migrated"
+  ],
+  "milestones": [
+    {"name": "Platform foundation", "baseline": "2026-07-31", "forecast": "2026-07-31", "status": "done"},
+    {"name": "Finance domain live", "baseline": "2026-09-30", "forecast": "2026-09-30", "status": "done"},
+    {"name": "Supply chain history tables", "baseline": "2026-10-16", "forecast": "2026-11-06", "status": "late"},
+    {"name": "Product catalogue + knowledge index feed", "baseline": "2026-10-23", "forecast": "2026-12-04", "status": "late"},
+    {"name": "Customer domain live", "baseline": "2027-01-15", "forecast": "2027-03-31", "status": "late"},
+    {"name": "Legacy warehouse decommission", "baseline": "2027-02-26", "forecast": null, "status": "at_risk"}
+  ],
+  "risks": [
+    {
+      "title": "Contract data engineers roll off 31 Oct",
+      "description": "Half the contract engineering capacity leaves when the SOW ends unless the extension is approved, pushing the catalogue to January and the customer domain to Q2 2027.",
+      "category": "people_capacity",
+      "likelihood": 4,
+      "impact": 5,
+      "mitigation": "Escalate SOW extension to CFO; cross-train two internal engineers (partial cover).",
+      "evidence": "two of our four contract data engineers roll off on 31 October when the current statement of work ends"
+    },
+    {
+      "title": "Product data quality debt unowned",
+      "description": "Legacy PIM data needs about 3 FTE from Product Management for six weeks; no business owners committed yet.",
+      "category": "data",
+      "likelihood": 4,
+      "impact": 4,
+      "mitigation": "Proposed data quality sprint awaiting sponsor decision.",
+      "evidence": "The business data owners for product have not committed people to the cleanup."
+    },
+    {
+      "title": "Catalogue delay on critical path",
+      "description": "The product catalogue domain feeds the copilot knowledge index and forecasting SKU mapping; its slip directly delays both.",
+      "category": "delivery",
+      "likelihood": 5,
+      "impact": 5,
+      "mitigation": "Downstream teams informed of early-December forecast.",
+      "evidence": "The product catalogue domain is on the critical path for at least two other initiatives"
+    },
+    {
+      "title": "Legacy warehouse licence renewal",
+      "description": "If migrations are not complete by 1 March 2027 the old warehouse licence must be renewed for another year.",
+      "category": "financial",
+      "likelihood": 3,
+      "impact": 4,
+      "mitigation": null,
+      "evidence": "the old warehouse licence renews 1 March 2027 (approx €420k)"
+    },
+    {
+      "title": "Named-user access grants",
+      "description": "Without role-based groups from the Identity programme, access is managed per user, adding overhead and audit findings.",
+      "category": "security",
+      "likelihood": 3,
+      "impact": 2,
+      "mitigation": "Access packages from IT-07 due 30 Oct.",
+      "evidence": "creating admin overhead and audit findings"
+    }
+  ],
+  "dependencies": [
+    {"depends_on": "Identity programme (IT-07)", "what": "Role-based access groups to replace named-user grants", "needed_by": "2026-10-30", "status": "on_track"}
+  ],
+  "asks": [
+    "CFO decision on contractor SOW extension by 24 Oct",
+    "Product Management to release 3 FTE for a six-week data quality sprint"
+  ]
+}

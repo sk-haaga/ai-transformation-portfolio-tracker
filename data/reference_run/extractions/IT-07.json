@@ -1,0 +1,56 @@
+{
+  "initiative_id": "IT-07",
+  "period_end": "2026-10-16",
+  "reported_rag": "GREEN",
+  "assessed_rag": "AMBER",
+  "rag_rationale": "Reported 'GREEN-ish', but partner identity has slipped two months, delaying a dependent rollout, and the access-request SLA is being breached.",
+  "percent_complete": 75,
+  "headline": "SSO migration 79% done and on track; partner identity for Tallinn copilot agents slips to end of January.",
+  "progress": [
+    "142 of 180 applications migrated to the new identity provider",
+    "Employee MFA coverage at 99.1%",
+    "Access package design signed off; data platform packages due 30 Oct",
+    "Workload identity pattern documented with two adopters onboarded"
+  ],
+  "milestones": [
+    {"name": "Access packages for data platform", "baseline": "2026-10-30", "forecast": "2026-10-30", "status": "on_track"},
+    {"name": "SSO migration complete", "baseline": "2026-11-30", "forecast": "2026-11-30", "status": "on_track"},
+    {"name": "Partner B2B identity live", "baseline": "2026-12-01", "forecast": "2027-01-31", "status": "late"},
+    {"name": "Workload identity for FIN-04", "baseline": "2026-12-31", "forecast": "2026-12-31", "status": "on_track"},
+    {"name": "Legacy directory decommissioned", "baseline": "2027-03-31", "forecast": "2027-03-31", "status": "on_track"}
+  ],
+  "risks": [
+    {
+      "title": "Partner identity federation incompatible",
+      "description": "The partner's identity provider cannot federate with the chosen standard until it upgrades in Q1 2027.",
+      "category": "technology",
+      "likelihood": 3,
+      "impact": 3,
+      "mitigation": "CISO to choose between partner upgrade, local guest accounts or a temporary IP-restricted exception.",
+      "evidence": "the partner's own identity provider is on an old version and doesn't support the federation standard we chose"
+    },
+    {
+      "title": "Identity team stretched, SLA breached",
+      "description": "Four people cover migration and BAU access requests; the request backlog is growing.",
+      "category": "people_capacity",
+      "likelihood": 4,
+      "impact": 3,
+      "mitigation": null,
+      "evidence": "avg wait for access request now 3.5 days, SLA is 2"
+    },
+    {
+      "title": "Legacy app upgrades unfunded",
+      "description": "About 8 legacy apps need vendor upgrades for modern auth; budget not approved.",
+      "category": "financial",
+      "likelihood": 3,
+      "impact": 2,
+      "mitigation": null,
+      "evidence": "Budget for upgrades ~€90k not yet approved."
+    }
+  ],
+  "dependencies": [],
+  "asks": [
+    "CISO decision on the interim partner identity option",
+    "Approve ~€90k for legacy app upgrades"
+  ]
+}

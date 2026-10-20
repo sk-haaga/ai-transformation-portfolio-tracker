@@ -1,0 +1,69 @@
+{
+  "initiative_id": "HR-05",
+  "period_end": "2026-10-15",
+  "reported_rag": "GREEN",
+  "assessed_rag": "AMBER",
+  "rag_rationale": "Enrolment is ahead of plan, but the mandatory Responsible AI module (an AI-literacy compliance item) slips to 2027 and copilot training dates are unconfirmed.",
+  "percent_complete": 65,
+  "headline": "2,140 staff enrolled, ahead of target; mandatory Responsible AI module slips to January without governance content.",
+  "progress": [
+    "2,140 employees enrolled in AI Foundations (year-end target 2,000)",
+    "85 AI champions active; sessions rated 4.4/5",
+    "12 manager workshops run for 190 managers"
+  ],
+  "milestones": [
+    {"name": "AI Foundations path launched", "baseline": "2026-06-30", "forecast": "2026-06-30", "status": "done"},
+    {"name": "2,000 learners enrolled", "baseline": "2026-12-31", "forecast": "2026-10-15", "status": "done"},
+    {"name": "Responsible AI module live (mandatory)", "baseline": "2026-11-01", "forecast": "2027-01-29", "status": "at_risk"},
+    {"name": "CRM-01 wave 2 agent training", "baseline": "2026-11-13", "forecast": null, "status": "tbc"},
+    {"name": "SAL-08 sales training", "baseline": "2027-01-29", "forecast": null, "status": "tbc"},
+    {"name": "2027 programme plan approved", "baseline": "2026-12-18", "forecast": "2026-12-18", "status": "on_track"}
+  ],
+  "risks": [
+    {
+      "title": "Responsible AI module content missing",
+      "description": "Governance content is a month late, so the module cannot be made mandatory; this also affects the EU AI Act AI-literacy obligation.",
+      "category": "governance_compliance",
+      "likelihood": 4,
+      "impact": 3,
+      "mitigation": "Asked GOV-03 to commit to a date.",
+      "evidence": "We can't make the path mandatory for all staff without it, and Legal won't let us write it ourselves."
+    },
+    {
+      "title": "Copilot training booked against moving date",
+      "description": "About 30 sessions for 350 agents may need rebooking if wave 2 slips, and training far ahead of go-live does not stick.",
+      "category": "adoption",
+      "likelihood": 4,
+      "impact": 2,
+      "mitigation": "Firm date requested from CRM-01 by 25 Oct.",
+      "evidence": "If it does, we need to rebook ~30 sessions and trainers"
+    },
+    {
+      "title": "Sales training date unconfirmed",
+      "description": "January sales training for the proposal generator has no confirmed go-live to anchor to.",
+      "category": "adoption",
+      "likelihood": 3,
+      "impact": 2,
+      "mitigation": null,
+      "evidence": "we planned sales team training for January but have no confirmed go-live date"
+    },
+    {
+      "title": "Practice sandbox unfunded for 2027",
+      "description": "The €65k/year AI practice sandbox is funded for 2026 only.",
+      "category": "financial",
+      "likelihood": 3,
+      "impact": 2,
+      "mitigation": null,
+      "evidence": "Funded for 2026 only from the transformation budget."
+    }
+  ],
+  "dependencies": [
+    {"depends_on": "AI Governance working group (GOV-03)", "what": "Responsible AI module content", "needed_by": "2026-11-06", "status": "blocking"},
+    {"depends_on": "CRM-01", "what": "Firm wave 2 go-live date to schedule agent training", "needed_by": "2026-10-25", "status": "at_risk"},
+    {"depends_on": "Sales Proposal Generator (SAL-08)", "what": "Confirmed rollout date for sales training", "needed_by": null, "status": "at_risk"}
+  ],
+  "asks": [
+    "GOV-03 to commit to a date for Responsible AI content",
+    "CRM-01 to confirm the wave 2 date by 25 Oct"
+  ]
+}

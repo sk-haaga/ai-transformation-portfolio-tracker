@@ -1,0 +1,78 @@
+{
+  "initiative_id": "CRM-01",
+  "period_end": "2026-10-16",
+  "reported_rag": "AMBER",
+  "assessed_rag": "AMBER",
+  "rag_rationale": "Pilot results are solid, but wave 2 go-live has slipped five weeks on two external dependencies; agree with Amber.",
+  "percent_complete": 45,
+  "headline": "Pilot cuts handle time 11%, but wave 2 slips to December awaiting the new knowledge index and AI approval.",
+  "progress": [
+    "Copilot used on 55% of eligible pilot tickets (up from 38%)",
+    "Hallucination rate in weekly audit down from 4.1% to 2.3% with prompt library v3",
+    "1,240 agent ratings captured, 81% positive",
+    "Running cost €18 per 1,000 tickets vs €25 budget"
+  ],
+  "milestones": [
+    {"name": "Pilot complete (40 agents)", "baseline": "2026-10-15", "forecast": "2026-10-30", "status": "late"},
+    {"name": "Responsible AI approval", "baseline": "2026-10-20", "forecast": null, "status": "at_risk"},
+    {"name": "Wave 2 go-live (350 agents)", "baseline": "2026-11-02", "forecast": "2026-12-07", "status": "at_risk"},
+    {"name": "Partner agents (Tallinn) live", "baseline": "2027-01-11", "forecast": "2027-02-01", "status": "at_risk"}
+  ],
+  "risks": [
+    {
+      "title": "Copilot scaled on stale knowledge content",
+      "description": "The product knowledge index from the data platform has slipped; going live on the legacy SharePoint export risks wrong pricing and warranty answers.",
+      "category": "data",
+      "likelihood": 4,
+      "impact": 5,
+      "mitigation": "Hold wave 2 until the product index is live; manual refresh of top 200 articles in the interim.",
+      "evidence": "Until that lands we would be scaling a copilot that answers from stale content."
+    },
+    {
+      "title": "No Responsible AI approval for go-live",
+      "description": "The customer-facing GenAI checklist does not exist yet, so formal go-live approval cannot be granted.",
+      "category": "governance_compliance",
+      "likelihood": 5,
+      "impact": 4,
+      "mitigation": "Escalated to sponsor; CRM-01 offered as test case for the draft checklist.",
+      "evidence": "No checklist = no approval = no go-live."
+    },
+    {
+      "title": "Partner agents blocked on SSO access",
+      "description": "Outsourced agents in Tallinn cannot use the copilot until partner SSO and conditional access are in place.",
+      "category": "delivery",
+      "likelihood": 3,
+      "impact": 3,
+      "mitigation": null,
+      "evidence": "We also still need SSO / conditional access for the copilot web app before it can be opened to the outsourced partner agents in Tallinn"
+    },
+    {
+      "title": "Agent adoption plateau",
+      "description": "Some experienced agents ignore copilot suggestions, limiting handle-time gains.",
+      "category": "adoption",
+      "likelihood": 3,
+      "impact": 3,
+      "mitigation": "Champions network and coaching via the Skills Academy.",
+      "evidence": "Some senior agents ignore suggestions."
+    },
+    {
+      "title": "Model token pricing rise in 2027",
+      "description": "Announced provider pricing changes may make the run-cost assumption about 10% too low.",
+      "category": "financial",
+      "likelihood": 2,
+      "impact": 2,
+      "mitigation": "Monitoring.",
+      "evidence": "our assumption may be ~10% light"
+    }
+  ],
+  "dependencies": [
+    {"depends_on": "DAT-02", "what": "Product knowledge index built from the lakehouse product catalogue", "needed_by": "2026-11-02", "status": "blocking"},
+    {"depends_on": "GOV-03", "what": "Approval checklist for customer-facing GenAI", "needed_by": "2026-10-20", "status": "blocking"},
+    {"depends_on": "IT-07", "what": "SSO / conditional access for partner agents", "needed_by": "2027-01-11", "status": "at_risk"},
+    {"depends_on": "HR-05", "what": "Wave 2 agent training (weeks 45-46)", "needed_by": "2026-11-13", "status": "on_track"}
+  ],
+  "asks": [
+    "Confirm wave 2 waits for the new knowledge index rather than going live on legacy content",
+    "Press the AI Governance board for a date on the customer-facing GenAI checklist"
+  ]
+}
