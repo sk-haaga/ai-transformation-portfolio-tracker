@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portfolio-tracker"
+version = "0.1.0"
+description = "Turns scattered status updates from change initiatives into a leadership view: LLM summaries, ranked risks, dependencies, Power BI data and a one-slide PowerPoint brief."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.40",
+    "pydantic>=2.6",
+    "pandas>=2.0",
+    "networkx>=3.0",
+    "python-pptx>=0.6.23",
+    "matplotlib>=3.7",
+    "reportlab>=4.0",
+    "pypdf>=4.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+portfolio-tracker = "portfolio_tracker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
